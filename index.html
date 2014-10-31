@@ -1,0 +1,5585 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ayo Puasa!!!</title>
+	<link rel="stylesheet" href="theme/css/themes/default/jquery.mobile-1.4.2.min.css">
+	<link rel="stylesheet" href="theme/css/jqm-demos.css">
+
+	<script src="theme/js/jquery.js"></script>
+	<script src="theme/js/index.js"></script>
+	<script src="theme/js/jquery.mobile-1.4.2.min.js"></script>
+</head>
+
+<body>
+<!-- script exit phonegap -->
+<script src="???cordova-1.9.0.js"></script> 
+<script type="text/javascript">
+function onLoad()
+{
+      document.addEventListener("deviceready", onDeviceReady, true);
+}
+function showConfirm() {
+    navigator.notification.confirm(
+       'Yakin ingin keluar ?', 
+       exitFromApp,              
+       'Exit',            
+       'Cancel,OK'         
+    );
+ }
+  
+function exitFromApp(buttonIndex) {
+    if (buttonIndex==2){
+     navigator.app.exitApp();
+    }
+ }
+</script>
+
+<body onload="onload()">   
+<button onclick="showConfirm()"> 
+<!-- end script exit -->
+
+<!-- Start of first page: #one -->
+<div data-role="page" id="home">
+
+	<div data-role="header"  data-position="fixed">
+		<h1>Ayo Puasa!!!</h1>
+		<a href="#" data-icon="mail" class="ui-btn-center">Mail</a>
+		<a href="#" data-icon="action" class="ui-btn-right">Exit</a>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content" >
+		
+
+
+<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:auto">
+	<center>
+	<div data-role="navbar">
+    <ul>
+        <li><a href="#jadwal" class="ui-btn-active"><img src="theme/img/jadwal.png" width="64" height="64"> <br>Schedule<br>Jadwal Puasa</a></li>
+	</ul>
+	</div>
+	</center>
+	</div>
+	</div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:auto">
+	<center>
+	<div data-role="navbar">
+    <ul>
+        <li><a href="#doa" class="ui-btn-active"><img src="theme/img/doa.png" width="64" height="64"> <br>Prayer<br>Do'a Puasa</a></li>
+	</ul>
+	</div>
+	</center>
+	</div>
+	</div>
+</div>
+<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:auto">
+	<center>
+	<div data-role="navbar">
+    <ul>
+        <li><a href="#pengembang" class="ui-btn-active"><img src="theme/img/pengembang.png" width="64" height="64"> <br>Devplover<br>Pengembang</a></li>
+	</ul>
+	</div>
+	</center>
+	</div>
+	</div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:auto">
+	<center>
+	<div data-role="navbar">
+    <ul>
+        <li><a href="aplikasi" class="ui-btn-active"><img src="theme/img/aplikasi.png" width="64" height="64"> <br>Check Update<br>Cek Pembeharuan</a></li>
+	</ul>
+	</div>
+	</center>
+	</div>
+	</div>
+</div>
+		
+	</div><!-- /content -->
+
+	<div data-role="footer" data-theme="a"  data-position="fixed">
+		<h4>Powerd by Xidsoft</h4>
+	</div><!-- /footer -->
+</div><!-- /page one -->
+
+<!-- jadwal -->
+<div data-role="page" id="jadwal" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a href="#home" data-icon="back" class="ui-btn-left">Back</a>
+		<h1>Search City</h1>
+	</div><!-- /header -->
+
+<ul data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search the city (Cari Kota)...">
+    <li><a href="#ambon">Ambon (Maluku)</a></li>
+    <li><a href="#banda_aceh">Banda Aceh (Aceh)</a></li>
+    <li><a href="#bandar_lampung">Bandar Lampung (Lampung)</a></li>
+    <li><a href="#bandung">Bandung (Jawa Barat)</a></li>
+    <li><a href="#banjarmasin">Banjarmasin (Kalimantan Selatan)</a></li>
+    <li><a href="#bengkulu">Bengkulu</a></li>
+    <li><a href="#denpasar">Denpasar (Bali)</a></li>
+	<li><a href="#gorontalo">Gorontalo</a></li>
+    <li><a href="#jakarta">Jakarta</a></li>
+    <li><a href="#jambi">Jambi</a></li>
+    <li><a href="#jayapura">Jayapura (Papua)</a></li>
+    <li><a href="#kendari">Kendari (Sulawesi Tenggara)</a></li>
+    <li><a href="#kupang">Kupang (Nusa Tenggara Timur)</a></li>
+    <li><a href="#makassar">Makassar (Sulawesi Selatan)</a></li>
+    <li><a href="#majumu">Majumu (Sulawesi Barat)</a></li>
+    <li><a href="#manado">Manado (Sulawesi Utara)</a></li>
+    <li><a href="#manokwari">Manokwari (Papua Barat)</a></li>
+    <li><a href="#mataram">Mataram (Nusa Tenggara Barat)</a></li>
+    <li><a href="#medan">Medan (Sumatera Utara)</a></li>
+    <li><a href="#padang">Padang (Sumatera Barat)</a></li>
+    <li><a href="#palangkaraya">Palangkaraya (Kalimantan Tengah)</a></li>
+    <li><a href="#palembang">Palembang (Sumatera Selatan)</a></li>
+    <li><a href="#palu">Palu (Sulawesi Tengah)</a></li>
+	<li><a href="#pangkal_pinang">Pangkal Pinang (Kepulauan Bangka Belitung)</a></li>
+	<li><a href="#pekanbaru">Pekanbaru (Riau)</a></li>
+	<li><a href="#pontianak">Pontianak (Kalimantan Barat)</a></li>
+	<li><a href="#samarinda">Samarinda (Kalimantan Timur)</a></li>
+	<li><a href="#semarang">Semarang (Jawa Tengah)</a></li>
+	<li><a href="#serang">Serang (Banten)</a></li>
+	<li><a href="#sofifi">Sofifi (Maluku Utara)</a></li>
+	<li><a href="#surabaya">Surabaya (Jawa Timur)</a></li>
+	<li><a href="#tanjung_pinang">Tanjung Pinang (Kepulauan Riau)</a></li>
+	<li><a href="#tanjung_selor">Tanjung Selor (Kalimantan Utara)</a></li>
+	<li><a href="#palu">Yogyakarta</a></li>
+</ul>
+
+</div><!-- jadwal -->
+
+<!-- do'a-->
+<div data-role="page" id="doa" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a href="#home" data-icon="back" class="ui-btn-left">Back</a>
+		<h1>Pray (Do'a)</h1>
+	</div><!-- /header -->
+
+<div class="ui-corner-all custom-corners">
+  <div class="ui-bar ui-bar-a">
+    <h3>Do'a Niat Puasa</h3>
+  </div>
+  <div class="ui-body ui-body-a">
+    <p>نَوَيْتُ صَوْمَ غَدٍّ عَنْ اَدَاءِ فَرْضِ شَهْرِ رَمَضَانَ هَذِهِ السَّنَةِ ِللهِ تَعَالَى</p>
+	<p align="justify"><i> Nawaitu shouma ghodin ‘an adaa-i fardhi syahri romadhoona haadzihis sanati lillaahi ta ‘aala.</i></p>
+	<p align="justify">"Aku niat berpuasa esok hari utk menunaikan kewajiban bulan ramadhan tahun ini karena Allah Ta’ala".</p>
+  </div>
+</div>
+
+<div class="ui-corner-all custom-corners">
+  <div class="ui-bar ui-bar-a">
+    <h3>Do'a Berbuka Puasa</h3>
+  </div>
+  <div class="ui-body ui-body-a">
+    <p>اَللَّهُمَّ لَكَ صُمْتُ وَبِكَ ءَامَنْتُ وَعَلَى رِزْقِكَ اَفْطَرْتُ بِرَحْمَتِكَ يَااَرْحَمَ الرَّاحِمِيْنَ</p>
+	<p align="justify"><i>Allahumma laka Shumtu wabika aamantu wa’ala risqika afthartu birahmatika yaa arhamar raahimiin.</i></p>
+	<p align="justify">"Ya Allah karena engkau saya berpuasa & kepada engkau aku beriman & atas rezeki yang engkau beriman saya berbuka, dengen rahmat-Mu wahai Dzat yang Maha Pengasih dari semua yang pengasih".</p>
+  </div>
+</div>
+
+</div><!-- do'a -->
+
+<!-- pengembang -->
+<div data-role="page" id="pengembang" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a href="#home" data-icon="back" class="ui-btn-left">Back</a>
+		<h1>Devplover</h1>
+	</div><!-- /header -->
+
+<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:auto">
+<div class="ui-body ui-body-a ui-corner-all">
+<font size="2px">Ade Haryanto</font>
+	<br>
+	<a href="#"><img src="theme/ico/facebook.png" width="20px" height="20px">
+	<a href="#"><img src="theme/ico/twitter.png" width="20px" height="20px"></a>
+	<a href="#"><img src="theme/ico/youtube.png" width="20px" height="20px"></a>
+	<a href="#"><img src="theme/ico/blogger.png" width="20px" height="20px"></a>
+</div>
+	</div>
+	</div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:auto"><font size="2px">Programmer & UI</font></div></div>
+</div>
+
+<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:auto">
+<div class="ui-body ui-body-a ui-corner-all">
+<font size="2px">Ardika Ardika</font>
+	<br>
+	<a href="#"><img src="theme/ico/facebook.png" width="20px" height="20px">
+	<a href="#"><img src="theme/ico/twitter.png" width="20px" height="20px"></a>
+	<a href="#"><img src="theme/ico/youtube.png" width="20px" height="20px"></a>
+	<a href="#"><img src="theme/ico/blogger.png" width="20px" height="20px"></a>
+</div>
+	</div>
+	</div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:auto"><font size="2px">Data Of Schedule</font></div></div>
+</div>
+
+<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:auto">
+<div class="ui-body ui-body-a ui-corner-all">
+<font size="2px">Diana Aprilia</font>
+	<br>
+	<a href="#"><img src="theme/ico/facebook.png" width="20px" height="20px">
+	<a href="#"><img src="theme/ico/twitter.png" width="20px" height="20px"></a>
+	<a href="#"><img src="theme/ico/youtube.png" width="20px" height="20px"></a>
+	<a href="#"><img src="theme/ico/blogger.png" width="20px" height="20px"></a>
+</div>
+	</div>
+	</div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:auto"><font size="2px">Data Of Pray</font></div></div>
+</div>
+
+<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:auto">
+<div class="ui-body ui-body-a ui-corner-all">
+<font size="2px">Miduk Sihombing</font>
+	<br>
+	<a href="#"><img src="theme/ico/facebook.png" width="20px" height="20px">
+	<a href="#"><img src="theme/ico/twitter.png" width="20px" height="20px"></a>
+	<a href="#"><img src="theme/ico/youtube.png" width="20px" height="20px"></a>
+	<a href="#"><img src="theme/ico/blogger.png" width="20px" height="20px"></a>
+</div>
+	</div>
+	</div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:auto"><font size="2px">Data Of Schedule</font></div></div>
+</div>
+
+<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:auto">
+<div class="ui-body ui-body-a ui-corner-all">
+<font size="2px">Nama Siapa</font>
+	<br>
+	<a href="#"><img src="theme/ico/facebook.png" width="20px" height="20px">
+	<a href="#"><img src="theme/ico/twitter.png" width="20px" height="20px"></a>
+	<a href="#"><img src="theme/ico/youtube.png" width="20px" height="20px"></a>
+	<a href="#"><img src="theme/ico/blogger.png" width="20px" height="20px"></a>
+</div>
+	</div>
+	</div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:auto"><font size="2px">Data Of Schedule</font></div></div>
+</div>
+
+<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:auto">
+<div class="ui-body ui-body-a ui-corner-all">
+<font size="2px">Nama Siapa</font>
+	<br>
+	<a href="#"><img src="theme/ico/facebook.png" width="20px" height="20px">
+	<a href="#"><img src="theme/ico/twitter.png" width="20px" height="20px"></a>
+	<a href="#"><img src="theme/ico/youtube.png" width="20px" height="20px"></a>
+	<a href="#"><img src="theme/ico/blogger.png" width="20px" height="20px"></a>
+</div>
+	</div>
+	</div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:auto"><font size="2px">Data Of Schedule</font></div></div>
+</div>
+
+<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:auto">
+<div class="ui-body ui-body-a ui-corner-all">
+<font size="2px">Nama Siapa</font>
+	<br>
+	<a href="#"><img src="theme/ico/facebook.png" width="20px" height="20px">
+	<a href="#"><img src="theme/ico/twitter.png" width="20px" height="20px"></a>
+	<a href="#"><img src="theme/ico/youtube.png" width="20px" height="20px"></a>
+	<a href="#"><img src="theme/ico/blogger.png" width="20px" height="20px"></a>
+</div>
+	</div>
+	</div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:auto"><font size="2px">Data Of Schedule</font></div></div>
+</div>
+
+<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:auto">
+<div class="ui-body ui-body-a ui-corner-all">
+<font size="2px">Nama Siapa</font>
+	<br>
+	<a href="#"><img src="theme/ico/facebook.png" width="20px" height="20px">
+	<a href="#"><img src="theme/ico/twitter.png" width="20px" height="20px"></a>
+	<a href="#"><img src="theme/ico/youtube.png" width="20px" height="20px"></a>
+	<a href="#"><img src="theme/ico/blogger.png" width="20px" height="20px"></a>
+</div>
+	</div>
+	</div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:auto"><font size="2px">Data Of Schedule</font></div></div>
+</div>
+
+</div><!-- pengembang -->
+
+<!-- aplikasi -->
+<div data-role="page" id="aplikasi" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a href="#home" data-icon="back" class="ui-btn-left">Back</a>
+		<h1>Pembeharuan</h1>
+	</div><!-- /header -->
+
+
+
+</div><!-- aplikasi -->
+
+<!-- isi data jadwal puasa -->
+
+<!-- makassar -->
+<div data-role="page" id="makassar" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a href="#jadwal" data-icon="back" class="ui-btn-left">Back</a>
+		<h1>Makassar</h1>
+	</div><!-- /header -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">29 Juni 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:39 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:49 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:07 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:30 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:02 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:17 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">30 Juni 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:39 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:49 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:07 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:30 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:02 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:17 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">1 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:39 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:49 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:08 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:30 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:03 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:17 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">2 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:39 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:49 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:08 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:31 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:03 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:17 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">3 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:40 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:50 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:08 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:31 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:03 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:18 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">4 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:40 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:50 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:08 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:31 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:03 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:18 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">5 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:40 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:50 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:08 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:31 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:04 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:18 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">6 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:40 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:50 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:08 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:31 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:04 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:18 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">7 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:40 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:50 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:09 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:31 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:04 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:18 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">8 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:41 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:51 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:09 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:04 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:18 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">9 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:41 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:51 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:09 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:04 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:18 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">10 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:41 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:51 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:09 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:05 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:19 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">11 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:41 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:51 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:09 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:05 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:19 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">12 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:41 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:51 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:09 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:05 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:19 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">13 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:41 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:51 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:10 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:05 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:19 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">14 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:42 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:52 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:10 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:05 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:19 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">15 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:42 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:52 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:10 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:05 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:19 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">20 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:42 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:52 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:10 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:33 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:06 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:19 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">17 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:42 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:52 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:10 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:33 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:06 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:19 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">18 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:42 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:52 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:10 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:33 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:06 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:19 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">19 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:42 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:52 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:10 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:33 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:06 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:19 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">20 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:42 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:52 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:10 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:33 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:06 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:19 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">21 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:42 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:52 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:10 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:33 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:06 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:19 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">22 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:42 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:52 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:10 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:33 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:06 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">23 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:43 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:53 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:10 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:33 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:07 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">24 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:43 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:53 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:10 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:33 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:07 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">25 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:43 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:53 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:10 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:33 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:07 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">26 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:43 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:53 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:10 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:33 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:07 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">27 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:43 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:53 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:10 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:33 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:07 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">28 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:43 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:53 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:10 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:33 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:07 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+</div><!-- makassar -->
+
+<!-- palembang -->
+<div data-role="page" id="palembang" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a href="#jadwal" data-icon="back" class="ui-btn-left">Back</a>
+		<h1>Palembang</h1>
+	</div><!-- /header -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">29 Juni 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:34 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:44 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:06 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:30 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:05 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:19 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">30 Juni 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:34 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:44 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:06 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:30 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:05 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:19 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">1 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:34 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:44 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:06 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:30 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:05 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:19 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">2 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:34 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:44 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:06 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:30 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:05 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">3 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:35 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:45 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:07 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:31 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:05 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">4 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:35 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:45 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:07 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:31 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:06 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">5 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:35 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:45 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:07 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:31 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:06 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">6 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:35 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:45 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:07 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:31 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:06 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">7 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:36 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:46 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:07 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:31 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:06 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">8 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:36 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:46 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:07 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:31 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:06 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">9 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:36 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:46 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:08 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:30 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:07 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:21 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">10 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:36 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:46 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:08 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:30 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:07 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:21 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">11 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:36 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:46 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:08 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:30 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:07 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:21 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">12 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:37 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:47 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:08 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:07 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:21 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">13 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:37 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:47 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:08 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:07 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:21 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">14 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:37 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:47 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:08 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:07 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:21 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">15 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:37 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:47 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:08 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:07 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:21 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">20 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:37 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:47 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:08 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:07 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:21 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">17 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:37 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:47 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:09 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:08 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:21 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">18 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:37 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:47 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:09 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:08 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:21 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">19 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:38 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:48 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:09 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:08 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:21 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">20 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:38 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:48 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:09 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:08 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:21 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">21 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:38 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:48 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:09 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:08 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:21 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">22 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:38 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:48 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:09 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:08 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:21 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">23 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:38 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:48 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:09 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:08 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:21 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">24 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:38 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:48 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:09 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:08 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:21 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">25 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:38 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:48 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:09 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:08 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:21 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">26 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:38 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:48 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:09 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:09 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:21 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">27 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:38 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:48 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:09 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:09 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:21 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">28 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:38 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:48 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:09 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:09 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:21 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+</div><!-- palembang -->
+
+<!-- end isi data jadwal puasa -->
+
+<!-- Banda Aceh -->
+<div data-role="page" id="banda_aceh" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a href="#jadwal" data-icon="back" class="ui-btn-left">Back</a>
+		<h1>Banda Aceh</h1>
+	</div><!-- /header -->
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">29 Juni 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:43 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:53 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:45 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:24 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:37 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">30 Juni 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:43 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:53 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:45 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:24 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:37 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">1 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:44 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:54 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:45 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:24 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:37 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">2 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:44 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:54 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:45 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:25 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:38 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">3 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:44 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:54 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:46 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:25 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:38 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">4 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:44 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:54 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:20 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:46 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:25 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:38 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">5 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:45 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:55 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:21 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:46 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:25 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:38 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">6 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:45 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:55 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:21 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:46 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:25 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:38 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">7 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:45 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:55 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:21 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:46 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:25 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:38 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">8 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:45 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:55 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:21 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:46 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:26 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:38 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">9 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:46 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:56 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:21 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:46 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:26 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:38 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">10 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:46 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:56 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:21 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:46 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:26 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:38 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">11 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:46 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:56 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:22 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:47 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:26 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:39 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">12 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:46 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:56 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:22 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:47 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:26 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:39 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">13 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:46 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:56 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:22 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:47 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:26 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:39 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">14 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:47 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:57 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:22 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:47 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:26 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:39 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">15 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:47 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:57 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:22 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:47 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:27 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:39 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">20 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:47 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:57 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:22 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:47 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:27 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:39 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">17 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:47 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:57 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:22 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:47 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:27 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:39 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">18 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:47 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:57 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:22 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:47 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:27 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:39 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">19 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:47 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:57 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:22 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:47 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:27 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:39 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">20 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:48 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:58 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:22 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:47 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:27 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:39 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">21 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:48 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:58 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:23 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:47 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:27 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:39 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">22 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:48 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:58 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:23 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:47 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:27 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:39 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">23 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:48 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:58 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:23 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:47 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:27 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:39 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">24 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:48 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:58 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:23 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:47 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:27 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:39 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">25 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:48 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:58 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:23 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:46 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:27 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:38 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">26 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:48 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:58 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:23 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:46 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:27 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:38 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">27 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:49 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:59 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:23 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:46 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:27 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:38 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+<!-- start -->
+<div data-role="navbar">
+    <ul>
+        <li><a class="ui-btn-active">28 Juli 2014</a></li>
+    </ul>
+</div>
+<ul data-role="listview">
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Imsyak</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:49 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Shubuh</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>04:59 AM</center></div></div>
+	</div>
+	</center>
+	</li>
+	<li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Zhuhr</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>12:23 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Ashar</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>15:46 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>Maghrib</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>18:27 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+    <li>
+	<center>
+	<div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a"><center>'Isya'</center></div></div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a"><center>19:38 PM</center></div></div>
+	</div>
+	</center>
+	</li>
+</ul>
+<!-- end -->
+
+</div>
+</div><!-- Banda Aceh -->
+
+</body>
+</html>
